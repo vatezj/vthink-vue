@@ -11,7 +11,7 @@
         <a-input
           placeholder="公司/部门名称"
           v-decorator="[
-            'name',
+            'dept_name',
             {
               rules: [{ required: true, message: '请输入公司/部门名称!' }]
             }
@@ -26,7 +26,7 @@
           placeholder="选择所属上级"
           treeDefaultExpandAll
           v-decorator="[
-            'pid',
+            'dept_pid',
             {
               rules: [{ required: true, message: '请选择所属上级!' }]
             }
@@ -37,7 +37,7 @@
       <a-form-item label="状态" :labelCol="labelCol" :wrapperCol="wrapperCol" hasFeedback>
         <a-select
           v-decorator="[
-            'status',
+            'dept_status',
             {
               rules: [{ required: true, message: '请选择状态!' }]
             }

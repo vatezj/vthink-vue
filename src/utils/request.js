@@ -32,7 +32,7 @@ const service = axios.create({
   // withCredentials: true,
   // crossDomain: true,
   baseURL: process.env.VUE_APP_API_BASE_URL, // api base_url
-  timeout: 6000 // 请求超时时间
+  timeout: 10000 // 请求超时时间
 })
 
 const err = (error) => {
@@ -84,7 +84,10 @@ const err = (error) => {
 
           // 没有操作权限
           case 50403: {
-            router.push({ path: `/exception/403` })
+            notification.error({
+              message: `您没有操作权限 ${status}: ${url}`,
+              description: errorText
+            })
             break
           }
         }
@@ -95,9 +98,9 @@ const err = (error) => {
         description: errorText
       })
 
-      if ([403, 404, 500].indexOf(status) !== -1) {
-        router.push({ path: `/exception/${status}` })
-      }
+      // if ([403, 404, 500].indexOf(status) !== -1) {
+      //   router.push({ path: `/exception/${status}` })
+      // }
       // store
     }
   } else if (!response) {
@@ -113,7 +116,7 @@ const err = (error) => {
 service.interceptors.request.use(config => {
   const token = Vue.ls.get(ACCESS_TOKEN)
   if (token) {
-    config.headers['Authorization'] = 'auth-token=' + token // 让每个请求携带自定义 token 请根据实际情况自行修改
+    config.headers['token'] = 'auth-token=' + token // 让每个请求携带自定义 token 请根据实际情况自行修改
   }
   return config
 }, err)

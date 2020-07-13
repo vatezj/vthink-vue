@@ -31,6 +31,14 @@ export function createAccount (data) {
   })
 }
 
+export function addAccount (data) {
+  return axios({
+    url: api.User,
+    method: 'post',
+    data
+  })
+}
+
 export function updateAccount (id, data) {
   return axios({
     url: `${api.User}/${id}`,

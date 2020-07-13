@@ -60,15 +60,15 @@ import { fetchAllPost, createPost, updatePost, deletePost } from '@/api/post'
 const columns = [
   {
     title: '岗位标识',
-    dataIndex: 'code'
+    dataIndex: 'post_code'
   },
   {
     title: '岗位名称',
-    dataIndex: 'name'
+    dataIndex: 'post_name'
   },
   {
     title: '岗位排序',
-    dataIndex: 'sort'
+    dataIndex: 'post_sort'
   },
   {
     title: '状态',
@@ -108,13 +108,13 @@ export default {
   methods: {
     showModal (row) {
       this.visible = true
-      this.selected = row.id
+      this.selected = row.post_id
       const form = this.$refs.postForm.form
       this.$nextTick(() => {
         form.setFieldsValue({
-          name: row.name,
-          code: row.code,
-          sort: row.sort,
+          post_name: row.post_name,
+          post_code: row.post_code,
+          post_sort: row.post_sort,
           status: row.status
         })
       })

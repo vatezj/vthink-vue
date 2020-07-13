@@ -2,9 +2,9 @@
   <div class="footer">
     <div class="links">
       <a
-        href="https://pro.loacg.com/"
+        href="http://www.vate.ren/"
         target="_blank"
-      >Pro 首页</a>
+      >Hu、alex</a>
       <a
         href="https://github.com/sendya/ant-design-pro-vue"
         target="_blank"
@@ -16,7 +16,7 @@
     </div>
     <div class="copyright">
       Copyright
-      <a-icon type="copyright" /> 2019 <span><a href="https://github.com/edenleung">Eden Leung</a></span>
+      <a-icon type="copyright" /> 2020 <span><a href="http://vthink.vate.ren">vatezj</a></span>
     </div>
   </div>
 </template>
