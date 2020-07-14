@@ -1,7 +1,8 @@
 <template>
   <div class="logo">
     <router-link :to="{name:'Dashboard'}">
-      <LogoSvg alt="logo" />
+      <!-- <LogoSvg alt="logo" /> -->
+      <img src="@/assets/logo.png" alt="" srcset="">
       <h1 v-if="showTitle">{{ title }}</h1>
     </router-link>
   </div>
@@ -18,7 +19,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Ant Design Pro',
+      default: 'vthink',
       required: false
     },
     showTitle: {

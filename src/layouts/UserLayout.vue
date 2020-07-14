@@ -4,12 +4,12 @@
       <div class="top">
         <div class="header">
           <a href="/">
-            <img src="~@/assets/logo.svg" class="logo" alt="logo">
-            <span class="title">Ant Design</span>
+            <img src="~@/assets/logo.png" class="logo" alt="logo">
+            <span class="title">vthink</span>
           </a>
         </div>
         <div class="desc">
-          Ant Design 是西湖区最具影响力的 Web 设计规范
+         开箱即用的中台解决方案
         </div>
       </div>
 
@@ -22,7 +22,7 @@
           <a href="_self">条款</a>
         </div>
         <div class="copyright">
-          Copyright &copy; 2019 <a href="https://github.com/edenleung">Eden Leung</a>
+          Copyright &copy; 2020 <a href="http://vthink.vate.ren">vThink</a>
         </div>
       </div>
     </div>

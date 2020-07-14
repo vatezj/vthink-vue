@@ -10,9 +10,12 @@ const constantRouterComponents = {
   BlankLayout: BlankLayout,
   RouteView: RouteView,
   PageView: PageView,
+
   '403': () => import(/* webpackChunkName: "error" */ '@/views/exception/403'),
   '404': () => import(/* webpackChunkName: "error" */ '@/views/exception/404'),
   '500': () => import(/* webpackChunkName: "error" */ '@/views/exception/500'),
+
+
 
   // 你需要动态引入的页面组件
   'Workplace': () => import('@/views/dashboard/Workplace'),
