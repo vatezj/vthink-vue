@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const createThemeColorReplacerPlugin = require('./config/plugin.config')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
@@ -38,6 +38,8 @@ const assetsCDN = {
 
 // vue.config.js
 const vueConfig = {
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
+  assetsDir: 'static',
   configureWebpack: {
     // webpack plugins
     plugins: [
@@ -108,7 +110,7 @@ const vueConfig = {
 
   devServer: {
     // development server port 8000
-    port: 8000
+    // port: 8000
     // If you want to turn on the proxy, please remove the mockjs /src/main.jsL11
     // proxy: {
     //   '/api': {
@@ -118,7 +120,6 @@ const vueConfig = {
     //   }
     // }
   },
-
   // disable source map in production
   productionSourceMap: false,
   lintOnSave: undefined,
